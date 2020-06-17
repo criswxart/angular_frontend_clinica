@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DefaultComponent } from './default.component';
-import { DashboardComponent } from '../../modules/dashboard/dashboard.component';
+import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
+import { RouterModule } from '@angular/router';
+import { PostComponent } from 'src/app/modules/post/post.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+//Angular material
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
   declarations: [
     DefaultComponent,
-    DashboardComponent
+    DashboardComponent,
+    PostComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    SharedModule,
+    MatSidenavModule
   ]
 })
 export class DefaultModule { }
